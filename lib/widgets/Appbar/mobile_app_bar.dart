@@ -12,8 +12,9 @@ class MobileAppBar extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [Colors.deepOrange[900]!, Colors.purple[900]!], begin: Alignment.centerLeft, end: Alignment.centerRight)
+        gradient: LinearGradient(colors: [Colors.red[900]!, Colors.purple[900]!], begin: Alignment.centerLeft, end: Alignment.centerRight)
       ),
+
     );
   }
 }
