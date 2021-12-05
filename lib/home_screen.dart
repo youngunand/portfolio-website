@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_site_test/services/my_service.dart';
 import 'package:web_site_test/widgets/Appbar/mobile_drawer.dart';
-import 'package:web_site_test/widgets/about.dart';
-import 'package:web_site_test/widgets/journey.dart';
-import 'package:web_site_test/widgets/landing_page.dart';
-import 'package:web_site_test/widgets/projects.dart';
-import 'package:web_site_test/widgets/vision.dart';
+import 'package:web_site_test/widgets/body_builder.dart';
 
 import 'widgets/Appbar/custom_app_bar.dart';
 
@@ -30,15 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       key: _myService.scaffoldKey,
       drawer: MobileDrawer(),
-      body: ListView(
-        children: [
-          LandingPage(screensize.height * 0.89),
-          AboutPage(screensize.height * 0.89),
-          JourneyPage(screensize.height * 0.89),
-          ProjectPage(screensize.height * 0.89),
-          VisionPage(screensize.height * 0.89)
-        ],
-      ),
+      body: BodyBuilder(screensize.height, screensize.width)
     );
   }
 }

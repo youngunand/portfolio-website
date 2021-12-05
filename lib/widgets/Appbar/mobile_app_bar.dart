@@ -5,10 +5,6 @@ class MobileAppBar extends StatelessWidget {
   MyService _myService = MyService();
   MobileAppBar({Key? key}) : super(key: key);
 
-  TextStyle textButtonStyle = TextStyle(
-      fontSize: 20, fontWeight: FontWeight.normal, color: Colors.white);
-  TextStyle labelStyle =
-      TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white);
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +21,11 @@ class MobileAppBar extends StatelessWidget {
               _myService.scaffoldKey.currentState!.openDrawer();
             },
             icon: Icon(Icons.menu),
-            color: Colors.white,
+            color: Theme.of(context).focusColor,
             iconSize: 29,
           ),
           SizedBox(
             width: 15,
-          ),
-          Text(
-            'SendIT Studios',
-            style: labelStyle,
           ),
         ],
       ),

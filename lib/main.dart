@@ -14,19 +14,22 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        hoverColor: Color(0xff374785),
-        hintColor: Color(0xfff8e9a1),
-        focusColor: Color(0xfff76c6c),
-        shadowColor: Color(0xffa8d0e6),
-        cardColor: Color(0xff24305e),
-        textTheme: TextTheme(
-          headline1: TextStyle(fontSize: 150, color: Color(0xfff76c6c)))//.apply(displayColor: Theme.of(context).focusColor)
-        
-      ),
+          primarySwatch: Colors.blue,
+          hoverColor: Color(0xff06133f),
+          hintColor: Color(0xff071852),
+          focusColor: Color(0xfff76c6c),
+          shadowColor: Color(0xffa8d0e6),
+          cardColor: Color(0xff050035),
+          textTheme: TextTheme(
+              headline1: TextStyle(fontSize: 150, color: Color(0xfff76c6c)),
+              headline2: TextStyle(fontSize: 22, color: Color.fromRGBO(236, 240, 241, 0.75)),
+              subtitle1: TextStyle(
+                  fontSize: 22,
+                  fontStyle: FontStyle.normal,
+                  color: Color(0xffd0d3d4)),
+              subtitle2: TextStyle(fontSize: 50, color: Color(0xfff76c6c),),
+              bodyText1: TextStyle(fontSize: 18, color:  Color.fromRGBO(236, 240, 241, 0.9),height:1.6)),),
       home: HomeScreen(),
     );
   }
 }
-
-
