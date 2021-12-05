@@ -11,9 +11,61 @@ class MobileAboutPage extends StatelessWidget {
     
     return Container(
       width: double.infinity,
-      height: height,
-      color: Colors.yellow,
-      child: Text('About'),
-    );
+      height: 1.4 * height,
+      padding: EdgeInsets.symmetric(horizontal: 15),
+      child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+                height: 0.15 * height,
+              ),
+              Text(
+                '1. About me',
+                style: Theme.of(context).textTheme.subtitle2,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+               Container(
+            height: 597,
+            width: 472,
+            padding: EdgeInsets.all(40),
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Container(
+                    height: 498,
+                    width: 363,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          width: 5, color: Theme.of(context).focusColor),
+                    ),
+                  ),
+                ),
+                Container(
+                     height: 498,
+                    width: 363,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).cardColor,
+                      border: Border.all(
+                          width: 5, color: Theme.of(context).focusColor),
+                    ),
+                    padding: EdgeInsets.all(20),
+                    child: Image.asset('profile_picture.jpeg')),
+              ],
+            ),
+          ),
+              SizedBox(
+                  width: width,
+                  child: Text(
+                    'Hey there! My name is Andreas Herzinger and I am a young Software Developer from Austria.\n\nSince I was a small child, I always had an interest in math and science. It was just a natural thing to me to explore how things work. From calculating the mass of a whole mountain (yes, a real mountain) to thinking about sizing continents on flat maps - my head was always trying to figure things out. \n\nAbout a year ago I picked up coding and started to grow a big interest in Technology and Computers. ',
+                    style: Theme.of(context).textTheme.bodyText1,
+                  )),
+
+             
+
+        ],
+      ));
   }
 }

@@ -26,7 +26,7 @@ class _BodyBuilderState extends State<BodyBuilder> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth > 1200) {
+      if (constraints.maxWidth > 800) {
         return Container(
           color: Theme.of(context).cardColor,
           child: ListView(

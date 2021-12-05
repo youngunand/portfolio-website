@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   simple_animations: ^4.0.0
   auto_size_text: ^3.0.0
+  timeline_tile: ^2.0.0
 
 dev_dependencies:
   flutter_test:

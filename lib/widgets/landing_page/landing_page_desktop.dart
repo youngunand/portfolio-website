@@ -28,7 +28,7 @@ class DesktopLandingPage extends StatelessWidget {
                     height: 10,
                   ),
                   AutoSizeText(
-                    'This website about me, trying to make the world a better place.',
+                    'My name is Andreas Herzinger. This website is about me, trying to make the world a better place.',
                     style: Theme.of(context).textTheme.subtitle1,
                     maxLines: 1,
                   )
