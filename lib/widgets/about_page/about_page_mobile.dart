@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class MobileAboutPage extends StatelessWidget {
@@ -11,7 +12,7 @@ class MobileAboutPage extends StatelessWidget {
     
     return Container(
       width: double.infinity,
-      height: 1.4 * height,
+      height: 1.7 * height,
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +29,7 @@ class MobileAboutPage extends StatelessWidget {
               ),
                Container(
             height: 597,
-            width: 472,
+            width: width,
             padding: EdgeInsets.all(40),
             child: Stack(
               children: [
@@ -36,7 +37,7 @@ class MobileAboutPage extends StatelessWidget {
                   alignment: Alignment.bottomRight,
                   child: Container(
                     height: 498,
-                    width: 363,
+                    width: 0.7*width,
                     decoration: BoxDecoration(
                       border: Border.all(
                           width: 5, color: Theme.of(context).focusColor),
@@ -45,7 +46,7 @@ class MobileAboutPage extends StatelessWidget {
                 ),
                 Container(
                      height: 498,
-                    width: 363,
+                    width: 0.7*width,
                     decoration: BoxDecoration(
                       color: Theme.of(context).cardColor,
                       border: Border.all(
@@ -58,7 +59,7 @@ class MobileAboutPage extends StatelessWidget {
           ),
               SizedBox(
                   width: width,
-                  child: Text(
+                  child: AutoSizeText(
                     'Hey there! My name is Andreas Herzinger and I am a young Software Developer from Austria.\n\nSince I was a small child, I always had an interest in math and science. It was just a natural thing to me to explore how things work. From calculating the mass of a whole mountain (yes, a real mountain) to thinking about sizing continents on flat maps - my head was always trying to figure things out. \n\nAbout a year ago I picked up coding and started to grow a big interest in Technology and Computers. ',
                     style: Theme.of(context).textTheme.bodyText1,
                   )),

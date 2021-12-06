@@ -33,9 +33,9 @@ class _BodyBuilderState extends State<BodyBuilder> {
             children: [
               DesktopLandingPage(),
               DesktopAboutPage(),
+              DesktopVisionPage(),
               DesktopJourneyPage(),
               DesktopProjectPage(),
-              DesktopVisionPage()
             ],
           ),
         );
@@ -46,9 +46,10 @@ class _BodyBuilderState extends State<BodyBuilder> {
             children: [
               MobileLandingPage(),
               MobileAboutPage(),
+              MobileVisionPage(),
               MobileJourneyPage(),
               MobileProjectPage(),
-              MobileVisionPage()
+             
             ],
           ),
         );

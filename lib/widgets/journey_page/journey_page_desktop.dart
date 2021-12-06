@@ -13,14 +13,38 @@ class DesktopJourneyPage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Container(
-      width: double.infinity,
-      height: 1.4 * height,
+      width: 0.7 * width,
+      height: 1.2 * height,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 60,
+              ),
+              Text(
+                '3. My Journey',
+                style: Theme.of(context).textTheme.subtitle2,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                  width: 375,
+                  child: AutoSizeText(
+                    '''When I first started to code I felt lost. I did not know where to start and what language to learn. After some googling I started with Python. I did some tutorials, but ended up not knowing anything. 
+                \nAfter that, I bought the book "Head First Java" and learned Java with it. After reading it, I started to build my own Desktop App using Java. It was very basic, but actually helped me studying for the Fishing-Exam.
+                \nWhen I had finished this App, I really wanted to develop Apps for Mobile Devices. Therefore I started learning Flutter. In August I started building my first big production App - Fish-Finder. I managed to relase it in the Google Play Store at the end of November.
+                ''',
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ))
+            ],
+          ),
           Container(
-            height: height,
-            width: 0.4 * width,
+            height: 1.2 *height,
+            width: 472,
             padding: EdgeInsets.symmetric(horizontal: 50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -65,9 +89,11 @@ class DesktopJourneyPage extends StatelessWidget {
                   ),
                   endChild: Container(
                     height: 99,
-                    child: AutoSizeText('Started learning Java',
-                        style: Theme.of(context).textTheme.bodyText1,
-                        group: timeLineGroup,),
+                    child: AutoSizeText(
+                      'Started learning Java',
+                      style: Theme.of(context).textTheme.bodyText1,
+                      group: timeLineGroup,
+                    ),
                     alignment: Alignment.centerLeft,
                   ),
                   beforeLineStyle:
@@ -151,35 +177,6 @@ class DesktopJourneyPage extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: 0.42 * width,
-            height: height,
-            alignment: Alignment.center,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 60,
-                ),
-                Text(
-                  '2. My Journey',
-                  style: Theme.of(context).textTheme.subtitle2,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                    width: 370,
-                    child: AutoSizeText(
-                      '''When I first started to code I felt lost. I did not know where to start and what language to learn. After some googling I started with Python. I did some tutorials, but ended up not knowing anything. 
-                  \nAfter that, I bought the book "Head First Java" and learned Java with it. After reading it, I started to build my own Desktop App using Java. It was very basic, but actually helped me studying for the Fishing-Exam.
-                  \nWhen I had finished this App, I really wanted to develop Apps for Mobile devices. Therefore I started learning Flutter. In August I started building my first big production app - Fish-Finder. I managed to relase it in the Google Play Store at the end of November.
-                  ''',
-                      style: Theme.of(context).textTheme.bodyText1,
-                    ))
-              ],
-            ),
-          )
         ],
       ),
     );

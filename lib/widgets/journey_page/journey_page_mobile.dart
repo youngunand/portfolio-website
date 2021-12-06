@@ -14,13 +14,13 @@ class MobileJourneyPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Container(
       width: double.infinity,
-      height: 1.4 * height,
+      height: 1.7 * height,
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            '2. My Journey',
+            '3. My Journey',
             style: Theme.of(context).textTheme.subtitle2,
           ),
           SizedBox(
@@ -154,7 +154,7 @@ class MobileJourneyPage extends StatelessWidget {
               child: AutoSizeText(
                 '''When I first started to code I felt lost. I did not know where to start and what language to learn. After some googling I started with Python. I did some tutorials, but ended up not knowing anything. 
                   \nAfter that, I bought the book "Head First Java" and learned Java with it. After reading it, I started to build my own Desktop App using Java. It was very basic, but actually helped me studying for the Fishing-Exam.
-                  \nWhen I had finished this App, I really wanted to develop Apps for Mobile devices. Therefore I started learning Flutter. In August I started building my first big production app - Fish-Finder. I managed to relase it in the Google Play Store at the end of November.
+                  \nWhen I had finished this App, I really wanted to develop Apps for Mobile Devices. Therefore I started learning Flutter. In August I started building my first big production App - Fish-Finder. I managed to relase it in the Google Play Store at the end of November.
                   ''',
                 style: Theme.of(context).textTheme.bodyText1,
               ))
