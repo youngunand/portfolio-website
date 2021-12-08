@@ -37,7 +37,8 @@ class MyApp extends StatelessWidget {
                 color: Color.fromRGBO(236, 240, 241, 0.9),
                 height: 1.6),
             bodyText2:
-                TextStyle(fontSize: 18, color: Color(0xfff76c6c), height: 1.6)),
+                TextStyle(fontSize: 18, color: Color(0xfff76c6c), height: 1.6),
+            overline: TextStyle(fontSize: 28, color: Color(0xfff76c6c))),
       ),
       home: HomeScreen(),
     );

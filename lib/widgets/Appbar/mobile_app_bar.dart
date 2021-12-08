@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:web_site_test/services/my_service.dart';
 
@@ -14,19 +15,30 @@ class MobileAppBar extends StatelessWidget {
       decoration: BoxDecoration(
           color: Theme.of(context).cardColor),
       padding: EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
+      child: Stack(
         children: [
-          IconButton(
-            onPressed: () {
-              _myService.scaffoldKey.currentState!.openDrawer();
-            },
-            icon: Icon(Icons.menu),
-            color: Theme.of(context).focusColor,
-            iconSize: 29,
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    _myService.scaffoldKey.currentState!.openDrawer();
+                  },
+                  icon: Icon(Icons.menu),
+                  color: Theme.of(context).focusColor,
+                  iconSize: 35,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+              ],
+            ),
           ),
-          SizedBox(
-            width: 15,
-          ),
+           Align(alignment: Alignment.centerRight,
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: AutoSizeText('Andreas Herzinger', style: Theme.of(context).textTheme.overline,)),),
         ],
       ),
     );
