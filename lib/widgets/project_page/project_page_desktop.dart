@@ -17,9 +17,14 @@ class DesktopProjectPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(width: 572,
-              child: Image.asset('firebase.png'),)
+              SizedBox(height: 100,),
+              Container(
+                width: 572,
+                padding: EdgeInsets.all(20),
+                child: Icon(Icons.build_circle_outlined, size: 500,color: Theme.of(context).focusColor,)
+              ),
             ],
           ),
           Column(
