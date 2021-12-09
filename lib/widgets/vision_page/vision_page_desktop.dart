@@ -41,6 +41,7 @@ class DesktopVisionPage extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
                 height: 60,
@@ -55,6 +56,7 @@ class DesktopVisionPage extends StatelessWidget {
               ),
               SizedBox(
                 width: 375,
+                height: 0.8* height,
                 child: AutoSizeText(
                   '''To put it short: My Vision is to leave the world behind as a better place.\n
 When I was about 10, I was already trying to figure out how it could be possible to end poverty and world hunger. Furthermore I thought about how it would be possible to connect people from different countries, cultures, etc.\n
