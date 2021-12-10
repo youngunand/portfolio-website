@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'home_screen.dart';
 
@@ -38,8 +39,8 @@ class MyApp extends StatelessWidget {
                 height: 1.6),
             bodyText2:
                 TextStyle(fontSize: 18, color: Color(0xfff76c6c), height: 1.6),
-            overline: TextStyle(fontSize: 28, color: Color(0xfff76c6c))),
-      ),
+            overline: TextStyle(fontSize: 28, color: Color(0xfff76c6c)),
+            caption: GoogleFonts.concertOne(fontSize: 28, color: Color(0xfff76c6c)))),
       home: HomeScreen(),
     );
   }

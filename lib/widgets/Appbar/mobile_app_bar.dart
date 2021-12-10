@@ -38,7 +38,7 @@ class MobileAppBar extends StatelessWidget {
            Align(alignment: Alignment.centerRight,
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: AutoSizeText('Andreas Herzinger', style: Theme.of(context).textTheme.overline,)),),
+            child: AutoSizeText('Andreas Herzinger', style: Theme.of(context).textTheme.caption,)),),
         ],
       ),
     );

@@ -1,11 +1,14 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectShowCase extends StatelessWidget {
   double height = 1;
   double width = 1;
+
+  PageController pageController = PageController(initialPage: 0);
 
   String title;
   String description;
@@ -16,17 +19,17 @@ class ProjectShowCase extends StatelessWidget {
   List<String> picturePaths;
   List<String> technologiesUsed;
   AutoSizeGroup autoSizeGroup;
-  ProjectShowCase(
-      {
-      required this.title,
-      required this.description,
-      required this.gitHubUrl,
-      this.googlePlayUrl = '',
-      this.googlePlayLinked = false,
-      this.horizontalPicture = false,
-      required this.technologiesUsed, 
-      required this.autoSizeGroup,
-      required this.picturePaths,});
+  ProjectShowCase({
+    required this.title,
+    required this.description,
+    required this.gitHubUrl,
+    this.googlePlayUrl = '',
+    this.googlePlayLinked = false,
+    this.horizontalPicture = false,
+    required this.technologiesUsed,
+    required this.autoSizeGroup,
+    required this.picturePaths,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -46,16 +49,60 @@ class ProjectShowCase extends StatelessWidget {
           Column(
             children: [
               SizedBox(
-                height: 0.45*height,
-                child: PageView.builder(itemBuilder: (context, i){
-                  return Container(
-                    child: Image.asset(picturePaths[i]),
-                  );
-                }, itemCount: picturePaths.length,),
+                height: 0.45 * height,
+                child: Stack(
+                  children: [
+                    Align(
+                      alignment: Alignment.topCenter,
+                      child: PageView.builder(
+                        itemBuilder: (context, i) {
+                          return Container(
+                            height: 0.45*height,
+                            child: Image.asset(picturePaths[i]),
+                          );
+                        },
+                        itemCount: picturePaths.length,
+                        controller: pageController,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: picturePaths.length > 2 ? IconButton(
+                        iconSize: 30,
+                        icon: Icon(Icons.arrow_back_ios),
+                        color: Theme.of(context).shadowColor,
+                        onPressed: () {
+                          pageController.previousPage(
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.easeIn);
+                        },
+                      ) : null,
+                    ),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: picturePaths.length > 2 ? IconButton(
+                        iconSize: 30,
+                        icon: Icon(Icons.arrow_forward_ios),
+                        color: Theme.of(context).shadowColor,
+                        onPressed: () {
+                           pageController.nextPage(
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.easeIn);
+                        },
+                      ) : null,
+                    ),
+                    
+                  ],
+                ),
               ),
-                
+              SizedBox(height: 0.01*height,),
+              picturePaths.length > 2 ? SmoothPageIndicator(controller: pageController, count: picturePaths.length, effect: WormEffect(
+                dotHeight: 13,
+                dotWidth: 13,
+                activeDotColor: Theme.of(context).focusColor
+              ),): Container(),
               SizedBox(
-                height: 0.05 * height,
+                height: 0.03 * height,
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -167,7 +214,9 @@ class ProjectShowCase extends StatelessWidget {
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 0.0025*height,),
+                                    SizedBox(
+                                      height: 0.0025 * height,
+                                    ),
                                     googlePlayLinked == true
                                         ? Row(
                                             mainAxisAlignment:

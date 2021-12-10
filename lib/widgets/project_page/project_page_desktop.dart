@@ -64,6 +64,7 @@ As I am still doing my Community Service, which is obligatory in Austria if you 
             ],
           ),
         ),
+        Divider(height: 0.1 * height, color: Theme.of(context).shadowColor,),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 0.04*width),
           child: Column(
@@ -92,8 +93,16 @@ As I am still doing my Community Service, which is obligatory in Austria if you 
                           technologiesUsed: ['dart', 'flutter', 'git'],
                           autoSizeGroup: autoSizeGroup,
                         ),
+                        ProjectShowCase(title: 'Raspy-Radio', description: 'App I built for my father, he wanted to have an UI for his Radio Project.', gitHubUrl: 'https://github.com/youngunand/Rasperry-Pi-Radio', technologiesUsed: ['python', 'rasperry_pi', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['raspy_radio.png'])
+                
                 ],
               ),
+              Row(
+                children: [
+                  ProjectShowCase(title: 'Fishing-Exam App', description: 'App I used to prepare for my Fishing-Exam', gitHubUrl:'https://github.com/youngunand/Fishing-Exam-App' , technologiesUsed: ['java', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['fishing_exam_2.png', 'fishing_exam_3.png', 'fishing_exam_4.png', 'fishing_exam_5.png'])
+                ],
+              )
+              
             ],
           ),
         )

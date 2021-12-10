@@ -32,6 +32,8 @@ dependencies:
   auto_size_text: ^3.0.0
   timeline_tile: ^2.0.0
   url_launcher: ^6.0.10
+  smooth_page_indicator: ^1.0.0+2
+  google_fonts: ^2.1.0
 
 dev_dependencies:
   flutter_test:
