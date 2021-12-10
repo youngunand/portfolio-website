@@ -7,21 +7,26 @@ class ProjectShowCase extends StatelessWidget {
   double height = 1;
   double width = 1;
 
-  String picturePath;
   String title;
   String description;
   String gitHubUrl;
+  String googlePlayUrl;
   bool googlePlayLinked;
   bool horizontalPicture;
+  List<String> picturePaths;
   List<String> technologiesUsed;
+  AutoSizeGroup autoSizeGroup;
   ProjectShowCase(
-      {required this.picturePath,
+      {
       required this.title,
       required this.description,
       required this.gitHubUrl,
+      this.googlePlayUrl = '',
       this.googlePlayLinked = false,
       this.horizontalPicture = false,
-      required this.technologiesUsed});
+      required this.technologiesUsed, 
+      required this.autoSizeGroup,
+      required this.picturePaths,});
 
   @override
   Widget build(BuildContext context) {
@@ -31,39 +36,60 @@ class ProjectShowCase extends StatelessWidget {
       height: 0.8 * height,
       width: 0.5 * height,
       decoration: BoxDecoration(
-          border: Border.all(color: Theme.of(context).shadowColor, width: 1),
+          border: Border.all(color: Theme.of(context).shadowColor, width: 2),
           color: Theme.of(context).hintColor,
           borderRadius: BorderRadius.circular(20)),
-      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+      padding: EdgeInsets.symmetric(
+          horizontal: 0.02 * width, vertical: 0.02 * height),
       child: Stack(
         children: [
           Column(
             children: [
               SizedBox(
-                height: 0.45 * height,
-                child: Image.asset(picturePath),
+                height: 0.45*height,
+                child: PageView.builder(itemBuilder: (context, i){
+                  return Container(
+                    child: Image.asset(picturePaths[i]),
+                  );
+                }, itemCount: picturePaths.length,),
               ),
+                
               SizedBox(
                 height: 0.05 * height,
               ),
-              AutoSizeText(
-                title,
-                style: Theme.of(context).textTheme.overline,
+              Align(
+                alignment: Alignment.centerLeft,
+                child: SizedBox(
+                  height: 0.05 * height,
+                  child: AutoSizeText(
+                    title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .overline!
+                        .copyWith(fontSize: 32),
+                    textAlign: TextAlign.start,
+                    maxLines: 1,
+                  ),
+                ),
               ),
               Divider(
                 color: Colors.grey[800],
               ),
-              AutoSizeText(
-                description,
-                style: Theme.of(context).textTheme.bodyText1,
+              SizedBox(
+                height: 0.07 * height,
+                child: AutoSizeText(
+                  description,
+                  group: autoSizeGroup,
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
               ),
             ],
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 0.1 * height,
-              width: 0.4 * height,
+              height: 0.11 * height,
+              width: 0.5 * height,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -72,11 +98,11 @@ class ProjectShowCase extends StatelessWidget {
                   ),
                   IntrinsicHeight(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
                           height: 0.05 * height,
-                          width: 0.25 * height,
+                          width: 0.24 * height,
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -99,39 +125,88 @@ class ProjectShowCase extends StatelessWidget {
                             ],
                           ),
                         ),
-                        VerticalDivider(
-                          color: Colors.grey[800],
-                        ),
-                        SizedBox(
-                          height: 0.05 * height,
-                          width: 0.15 * height,
-                          child: Row(
-                            children: [
-                              RichText(
-                                  text: TextSpan(children: [
-                                TextSpan(
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyText2!
-                                        .copyWith(
-                                            color: Colors.blue, fontSize: 14),
-                                    text: 'View on ',
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () async {
-                                        final url =
-                                            gitHubUrl;
-                                        if (await canLaunch(url)) {
-                                          await launch(url);
-                                        }
-                                      })
-                              ])),
-                              Image.asset(
-                                'github.png',
-                                height: 0.03 * height,
-                                width: 0.03 * height,
-                              )
-                            ],
-                          ),
+                        Row(
+                          children: [
+                            VerticalDivider(
+                              color: Colors.grey[800],
+                            ),
+                            SizedBox(
+                              height: 0.08 * height,
+                              width: 0.12 * height,
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        RichText(
+                                            text: TextSpan(children: [
+                                          TextSpan(
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .bodyText2!
+                                                  .copyWith(
+                                                      color: Colors.blue,
+                                                      fontSize: 14),
+                                              text: 'View on ',
+                                              recognizer: TapGestureRecognizer()
+                                                ..onTap = () async {
+                                                  final url = gitHubUrl;
+                                                  if (await canLaunch(url)) {
+                                                    await launch(url);
+                                                  }
+                                                })
+                                        ])),
+                                        Image.asset(
+                                          'github.png',
+                                          height: 0.025 * height,
+                                          width: 0.025 * height,
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 0.0025*height,),
+                                    googlePlayLinked == true
+                                        ? Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: [
+                                              RichText(
+                                                  text: TextSpan(children: [
+                                                TextSpan(
+                                                    style: Theme.of(context)
+                                                        .textTheme
+                                                        .bodyText2!
+                                                        .copyWith(
+                                                            color: Colors.blue,
+                                                            fontSize: 14),
+                                                    text: 'View on ',
+                                                    recognizer:
+                                                        TapGestureRecognizer()
+                                                          ..onTap = () async {
+                                                            final url =
+                                                                googlePlayUrl;
+                                                            if (await canLaunch(
+                                                                url)) {
+                                                              await launch(url);
+                                                            }
+                                                          })
+                                              ])),
+                                              Image.asset(
+                                                'google_play.png',
+                                                height: 0.025 * height,
+                                                width: 0.025 * height,
+                                              )
+                                            ],
+                                          )
+                                        : Row()
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         )
                       ],
                     ),
