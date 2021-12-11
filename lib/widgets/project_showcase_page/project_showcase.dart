@@ -104,15 +104,18 @@ class ProjectShowCase extends StatelessWidget {
                 height: 0.01 * height,
               ),
               picturePaths.length > 2
-                  ? SmoothPageIndicator(
-                      controller: pageController,
-                      count: picturePaths.length,
-                      effect: WormEffect(
-                          dotHeight: 13,
-                          dotWidth: 13,
-                          activeDotColor: Theme.of(context).focusColor),
-                    )
-                  : Container(),
+                  ? SizedBox(
+                    height: 0.02*height,
+                    child: SmoothPageIndicator(
+                        controller: pageController,
+                        count: picturePaths.length,
+                        effect: WormEffect(
+                            dotHeight: 13,
+                            dotWidth: 13,
+                            activeDotColor: Theme.of(context).focusColor),
+                      ),
+                  )
+                  : SizedBox(height: 0.02*height,),
               SizedBox(
                 height: 0.03 * height,
               ),
