@@ -25,7 +25,7 @@ class DesktopLandingPage extends StatelessWidget {
                   ),
                   
                   SizedBox(
-                    height: 10,
+                    height: 0.02* height,
                   ),
                   AutoSizeText(
                     'My name is Andreas Herzinger. This website is about me, trying to make the world a better place.',

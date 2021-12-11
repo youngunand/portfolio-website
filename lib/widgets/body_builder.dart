@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:web_site_test/services/my_service.dart';
+import 'package:web_site_test/widgets/contact_page/contact_page_mobile.dart';
 import 'package:web_site_test/widgets/project_page/project_page_desktop.dart';
 import 'package:web_site_test/widgets/vision_page/vision_page_desktop.dart';
-
 import 'about_page/about_page_desktop.dart';
 import 'about_page/about_page_mobile.dart';
+import 'contact_page/contact_page_desktop.dart';
 import 'journey_page/journey_page_desktop.dart';
 import 'journey_page/journey_page_mobile.dart';
 import 'landing_page/landing_page_desktop.dart';
@@ -38,6 +39,7 @@ class _BodyBuilderState extends State<BodyBuilder> {
               DesktopVisionPage(),
               DesktopJourneyPage(),
               DesktopProjectPage(),
+              DesktopContactPage(),
             ],
           ),
         );
@@ -52,6 +54,7 @@ class _BodyBuilderState extends State<BodyBuilder> {
               MobileVisionPage(),
               MobileJourneyPage(),
               MobileProjectPage(),
+              MobileContactPage()
             ],
           ),
         );

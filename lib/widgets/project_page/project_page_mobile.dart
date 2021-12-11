@@ -14,7 +14,7 @@ class MobileProjectPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Container(
         width: 0.9 * width,
-        height: 3.7 * height,
+        height: 3.9 * height,
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

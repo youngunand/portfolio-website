@@ -63,7 +63,6 @@ class MobileDrawer extends StatelessWidget {
                 _myService.scrollController.animateTo(3.9*height,
                     duration: Duration(milliseconds: 1200), curve: Curves.ease);
                 }),
-            SizedBox(height: 0,),
             Divider(
               indent: 15,
               endIndent: 15,
@@ -78,6 +77,22 @@ class MobileDrawer extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                 _myService.scrollController.animateTo(5.6* height,
+                    duration: Duration(milliseconds: 1200), curve: Curves.ease);
+                },),
+            Divider(
+              indent: 15,
+              endIndent: 15,
+              color: Theme.of(context).hoverColor,
+            ),
+            ListTile(
+                title: Text(
+                  'Contact',
+                  style: Theme.of(context).textTheme.headline2,
+                ),
+                contentPadding: EdgeInsets.symmetric(horizontal: 35),
+                onTap: () {
+                  Navigator.of(context).pop();
+                _myService.scrollController.animateTo(9.5* height,
                     duration: Duration(milliseconds: 1200), curve: Curves.ease);
                 },),
           ],

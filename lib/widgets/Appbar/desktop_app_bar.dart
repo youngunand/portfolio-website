@@ -32,58 +32,66 @@ class DesktopAppBar extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.centerRight,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextButton(
-                    onPressed: () {
-                      _myService.scrollController
-                          .animateTo(height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
-                    },
-                    child: Text(
-                      'About',
-                      style: Theme.of(context).textTheme.headline2,
-                    )),
-                SizedBox(
-                  width: 30,
+            child: SizedBox(
+              width: 0.4*width,
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                        onPressed: () {
+                          _myService.scrollController
+                              .animateTo(height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
+                        },
+                        child: AutoSizeText(
+                          'About',
+                          style: Theme.of(context).textTheme.headline2,
+                        )),
+                    SizedBox(width: 0.02*width,),
+                    TextButton(
+                        onPressed: () {
+                           _myService.scrollController
+                              .animateTo(2*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
+                        },
+                        child: AutoSizeText(
+                          'Vision',
+                          style: Theme.of(context).textTheme.headline2,
+                        )),
+                     SizedBox(width: 0.02*width,),
+                    TextButton(
+                        onPressed: () {
+                          _myService.scrollController
+                              .animateTo(3*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
+                        },
+                        child: AutoSizeText(
+                          'Journey',
+                          style: Theme.of(context).textTheme.headline2,
+                        )),
+                     SizedBox(width: 0.02*width,),
+                    TextButton(
+                        onPressed: () {
+                         _myService.scrollController
+                              .animateTo(4*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
+                        },
+                        child: AutoSizeText(
+                          'Projects',
+                          style: Theme.of(context).textTheme.headline2,
+                        )),
+                    SizedBox(width: 0.02*width,),
+                    TextButton(
+                        onPressed: () {
+                         _myService.scrollController
+                              .animateTo(5.7*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
+                        },
+                        child: AutoSizeText(
+                          'Contact',
+                          style: Theme.of(context).textTheme.headline2,
+                        )),
+                    
+                  ],
                 ),
-                TextButton(
-                    onPressed: () {
-                       _myService.scrollController
-                          .animateTo(2*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
-                    },
-                    child: Text(
-                      'Vision',
-                      style: Theme.of(context).textTheme.headline2,
-                    )),
-                SizedBox(
-                  width: 30,
-                ),
-                TextButton(
-                    onPressed: () {
-                      _myService.scrollController
-                          .animateTo(3*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
-                    },
-                    child: Text(
-                      'Journey',
-                      style: Theme.of(context).textTheme.headline2,
-                    )),
-                SizedBox(
-                  width: 30,
-                ),
-                TextButton(
-                    onPressed: () {
-                     _myService.scrollController
-                          .animateTo(4*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
-                    },
-                    child: Text(
-                      'Projects',
-                      style: Theme.of(context).textTheme.headline2,
-                    )),
-                SizedBox(
-                  width: 100,
-                ),
-              ],
+              ),
             ),
           ),
         ],

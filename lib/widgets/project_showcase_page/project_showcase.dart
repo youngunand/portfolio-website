@@ -144,14 +144,16 @@ class ProjectShowCase extends StatelessWidget {
               Divider(
                 color: Colors.grey[800],
               ),
-              SizedBox(
+              Align(
+                alignment: Alignment.centerLeft,
+                child: SizedBox(
                 height: 0.07 * height,
                 child: AutoSizeText(
                   description,
                   group: autoSizeGroup,
                   style: Theme.of(context).textTheme.bodyText1,
                 ),
-              ),
+              )),
             ],
           ),
           Align(

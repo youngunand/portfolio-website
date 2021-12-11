@@ -44,7 +44,16 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
+  fonts:
+    - family: ConcertOne
+      fonts:
+        - asset: assets/fonts/ConcertOne-Regular.ttf
+    - family: Dosis
+      fonts:
+        - asset: assets/fonts/Dosis-VariableFont_wght.ttf
+    - family: Overpass
+      fonts:
+        - asset: assets/fonts/Overpass-VariableFont_wght.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
