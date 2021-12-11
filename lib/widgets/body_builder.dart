@@ -31,16 +31,23 @@ class _BodyBuilderState extends State<BodyBuilder> {
       if (constraints.maxWidth > 800) {
         return Container(
           color: Theme.of(context).cardColor,
-          child: ListView(
+          child: RawScrollbar(
             controller: _myService.scrollController,
-            children: [
-              DesktopLandingPage(),
-              DesktopAboutPage(),
-              DesktopVisionPage(),
-              DesktopJourneyPage(),
-              DesktopProjectPage(),
-              DesktopContactPage(),
-            ],
+            thickness: 10,
+            isAlwaysShown: true,
+            thumbColor: Theme.of(context).shadowColor,
+            radius: Radius.circular(10),
+            child: ListView(
+              controller: _myService.scrollController,
+              children: [
+                DesktopLandingPage(),
+                DesktopAboutPage(),
+                DesktopVisionPage(),
+                DesktopJourneyPage(),
+                DesktopProjectPage(),
+                DesktopContactPage(),
+              ],
+            ),
           ),
         );
       } else {
