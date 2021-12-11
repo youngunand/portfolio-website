@@ -18,7 +18,7 @@ class MobileAboutPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-                height: 0.15 * height,
+                height: 0.02 * height,
               ),
               Text(
                 '1. About me',

@@ -12,7 +12,7 @@ class DesktopAboutPage extends StatelessWidget {
 
     return Container(
       width: 0.7 * width,
-      height: 0.9 * height,
+      height: height,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,37 +39,40 @@ class DesktopAboutPage extends StatelessWidget {
                   ))
             ],
           ),
-          SizedBox(
-            child: Container(
-              height: 597,
-              width: 472,
-              padding: EdgeInsets.all(40),
-              child: Stack(
-                children: [
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Container(
-                      height: 498,
-                      width: 363,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                            width: 5, color: Theme.of(context).focusColor),
+          Column(
+            children: [
+              SizedBox(height: 0.13*height,),
+              Container(
+                height: 597,
+                width: 472,
+                padding: EdgeInsets.all(40),
+                child: Stack(
+                  children: [
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Container(
+                        height: 498,
+                        width: 363,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              width: 5, color: Theme.of(context).focusColor),
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                       height: 498,
-                      width: 363,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).cardColor,
-                        border: Border.all(
-                            width: 5, color: Theme.of(context).focusColor),
-                      ),
-                      padding: EdgeInsets.all(20),
-                      child: Image.asset('profile_picture.jpeg')),
-                ],
+                    Container(
+                         height: 498,
+                        width: 363,
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).cardColor,
+                          border: Border.all(
+                              width: 5, color: Theme.of(context).focusColor),
+                        ),
+                        padding: EdgeInsets.all(20),
+                        child: Image.asset('profile_picture.jpeg')),
+                  ],
+                ),
               ),
-            ),
+            ],
           ),
         ],
       ),

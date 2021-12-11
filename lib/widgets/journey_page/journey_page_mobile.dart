@@ -19,6 +19,7 @@ class MobileJourneyPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 0.02*height,),
           Text(
             '3. My Journey',
             style: Theme.of(context).textTheme.subtitle2,

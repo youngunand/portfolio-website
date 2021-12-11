@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +23,6 @@ class DesktopVisionPage extends StatelessWidget {
             children: [
               SizedBox(height: 100,),
               Container(
-
                   width: 572,
                   decoration: BoxDecoration(
                       gradient: RadialGradient(colors: [
@@ -44,7 +42,7 @@ class DesktopVisionPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(
-                height: 60,
+                height: 0.1*height,
               ),
               Text(
                 '2. Vision',

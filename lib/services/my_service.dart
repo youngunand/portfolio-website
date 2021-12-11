@@ -6,4 +6,6 @@ class MyService {
   MyService._internal();
 
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+
+  final ScrollController scrollController = ScrollController();
 }

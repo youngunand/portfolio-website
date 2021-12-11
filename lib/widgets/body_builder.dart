@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_site_test/services/my_service.dart';
 import 'package:web_site_test/widgets/project_page/project_page_desktop.dart';
 import 'package:web_site_test/widgets/vision_page/vision_page_desktop.dart';
 
@@ -21,7 +22,7 @@ class BodyBuilder extends StatefulWidget {
 }
 
 class _BodyBuilderState extends State<BodyBuilder> {
-  
+  MyService _myService = MyService();
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +31,7 @@ class _BodyBuilderState extends State<BodyBuilder> {
         return Container(
           color: Theme.of(context).cardColor,
           child: ListView(
+            controller: _myService.scrollController,
             children: [
               DesktopLandingPage(),
               DesktopAboutPage(),
@@ -43,13 +45,13 @@ class _BodyBuilderState extends State<BodyBuilder> {
         return Container(
           color: Theme.of(context).cardColor,
           child: ListView(
+            controller: _myService.scrollController,
             children: [
               MobileLandingPage(),
               MobileAboutPage(),
               MobileVisionPage(),
               MobileJourneyPage(),
               MobileProjectPage(),
-             
             ],
           ),
         );

@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:web_site_test/widgets/project_showcase_page/project_showcase_desktop.dart';
+import 'package:web_site_test/widgets/project_showcase_page/project_showcase.dart';
 
 class DesktopProjectPage extends StatelessWidget {
   double height = 1;
@@ -15,8 +15,8 @@ class DesktopProjectPage extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 0.7 * width,
-          height: 0.9 * height,
+          width: 0.9 * width,
+          height: height,
           //color: Colors.lightGreen,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -24,9 +24,10 @@ class DesktopProjectPage extends StatelessWidget {
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 100,
+                    height: 0.1*height,
                   ),
                   Container(
                       width: 572,
@@ -41,6 +42,7 @@ class DesktopProjectPage extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 0.1*height,),
                   Text(
                     '4. Projects',
                     style: Theme.of(context).textTheme.subtitle2,
@@ -64,9 +66,9 @@ As I am still doing my Community Service, which is obligatory in Austria if you 
             ],
           ),
         ),
-        Divider(height: 0.1 * height, color: Theme.of(context).shadowColor,),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 0.04*width),
+
           child: Column(
             children: [
               Row(
@@ -78,6 +80,7 @@ As I am still doing my Community Service, which is obligatory in Austria if you 
                           gitHubUrl: 'https://github.com/youngunand/Fishing-App',
                           description:
                               'App for Fishermen, who want to track their catches.',
+                          duration: '4 months',
                           technologiesUsed: ['dart', 'firebase', 'flutter', 'git'],
                           googlePlayLinked: true,
                           googlePlayUrl:
@@ -90,22 +93,18 @@ As I am still doing my Community Service, which is obligatory in Austria if you 
                           gitHubUrl: 'https://github.com/youngunand/Zivi-Counter',
                           description:
                               'App for Community service-making men in Austria, who want to know when they are finished.',
+                          duration: '3 days',
                           technologiesUsed: ['dart', 'flutter', 'git'],
                           autoSizeGroup: autoSizeGroup,
                         ),
-                        ProjectShowCase(title: 'Raspy-Radio', description: 'App I built for my father, he wanted to have an UI for his Radio Project.', gitHubUrl: 'https://github.com/youngunand/Rasperry-Pi-Radio', technologiesUsed: ['python', 'rasperry_pi', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['raspy_radio.png'])
+                        ProjectShowCase(title: 'Raspy-Radio', description: 'App I built for my father, he wanted to have an UI for his Radio Project.',duration: '1 week', gitHubUrl: 'https://github.com/youngunand/Rasperry-Pi-Radio', technologiesUsed: ['python', 'rasperry_pi', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['raspy_radio.png'])
                 
                 ],
               ),
-              Row(
-                children: [
-                  ProjectShowCase(title: 'Fishing-Exam App', description: 'App I used to prepare for my Fishing-Exam', gitHubUrl:'https://github.com/youngunand/Fishing-Exam-App' , technologiesUsed: ['java', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['fishing_exam_2.png', 'fishing_exam_3.png', 'fishing_exam_4.png', 'fishing_exam_5.png'])
-                ],
-              )
-              
             ],
           ),
-        )
+        ),
+        SizedBox(height: 0.1*height,)
       ],
     );
   }

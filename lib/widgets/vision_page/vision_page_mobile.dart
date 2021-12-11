@@ -17,7 +17,7 @@ class MobileVisionPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 60,
+            height: 0.02*height,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

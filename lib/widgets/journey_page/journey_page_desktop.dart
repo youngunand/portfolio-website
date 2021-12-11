@@ -14,7 +14,7 @@ class DesktopJourneyPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Container(
       width: 0.7 * width,
-      height: 1.2 * height,
+      height: height,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,7 +34,6 @@ class DesktopJourneyPage extends StatelessWidget {
               ),
               SizedBox(
                   width: 375,
-                  height: 0.9 * height,
                   child: AutoSizeText(
                     '''When I first started to code I felt lost. I did not know where to start and what language to learn. After some googling I started with Python. I did some tutorials, but ended up not knowing anything. 
                 \nAfter that, I bought the book "Head First Java" and learned Java with it. After reading it, I started to build my own Desktop App using Java. It was very basic, but actually helped me studying for the Fishing-Exam.

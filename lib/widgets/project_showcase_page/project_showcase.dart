@@ -14,6 +14,7 @@ class ProjectShowCase extends StatelessWidget {
   String description;
   String gitHubUrl;
   String googlePlayUrl;
+  String duration;
   bool googlePlayLinked;
   bool horizontalPicture;
   List<String> picturePaths;
@@ -24,6 +25,7 @@ class ProjectShowCase extends StatelessWidget {
     required this.description,
     required this.gitHubUrl,
     this.googlePlayUrl = '',
+    required this.duration,
     this.googlePlayLinked = false,
     this.horizontalPicture = false,
     required this.technologiesUsed,
@@ -57,7 +59,7 @@ class ProjectShowCase extends StatelessWidget {
                       child: PageView.builder(
                         itemBuilder: (context, i) {
                           return Container(
-                            height: 0.45*height,
+                            height: 0.45 * height,
                             child: Image.asset(picturePaths[i]),
                           );
                         },
@@ -67,57 +69,77 @@ class ProjectShowCase extends StatelessWidget {
                     ),
                     Align(
                       alignment: Alignment.centerLeft,
-                      child: picturePaths.length > 2 ? IconButton(
-                        iconSize: 30,
-                        icon: Icon(Icons.arrow_back_ios),
-                        color: Theme.of(context).shadowColor,
-                        onPressed: () {
-                          pageController.previousPage(
-                              duration: Duration(milliseconds: 500),
-                              curve: Curves.easeIn);
-                        },
-                      ) : null,
+                      child: picturePaths.length > 2
+                          ? IconButton(
+                              iconSize: 30,
+                              icon: Icon(Icons.arrow_back_ios),
+                              color: Theme.of(context).shadowColor,
+                              onPressed: () {
+                                pageController.previousPage(
+                                    duration: Duration(milliseconds: 500),
+                                    curve: Curves.ease);
+                              },
+                            )
+                          : null,
                     ),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: picturePaths.length > 2 ? IconButton(
-                        iconSize: 30,
-                        icon: Icon(Icons.arrow_forward_ios),
-                        color: Theme.of(context).shadowColor,
-                        onPressed: () {
-                           pageController.nextPage(
-                              duration: Duration(milliseconds: 500),
-                              curve: Curves.easeIn);
-                        },
-                      ) : null,
+                      child: picturePaths.length > 2
+                          ? IconButton(
+                              iconSize: 30,
+                              icon: Icon(Icons.arrow_forward_ios),
+                              color: Theme.of(context).shadowColor,
+                              onPressed: () {
+                                pageController.nextPage(
+                                    duration: Duration(milliseconds: 500),
+                                    curve: Curves.ease);
+                              },
+                            )
+                          : null,
                     ),
-                    
                   ],
                 ),
               ),
-              SizedBox(height: 0.01*height,),
-              picturePaths.length > 2 ? SmoothPageIndicator(controller: pageController, count: picturePaths.length, effect: WormEffect(
-                dotHeight: 13,
-                dotWidth: 13,
-                activeDotColor: Theme.of(context).focusColor
-              ),): Container(),
+              SizedBox(
+                height: 0.01 * height,
+              ),
+              picturePaths.length > 2
+                  ? SmoothPageIndicator(
+                      controller: pageController,
+                      count: picturePaths.length,
+                      effect: WormEffect(
+                          dotHeight: 13,
+                          dotWidth: 13,
+                          activeDotColor: Theme.of(context).focusColor),
+                    )
+                  : Container(),
               SizedBox(
                 height: 0.03 * height,
               ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: SizedBox(
-                  height: 0.05 * height,
-                  child: AutoSizeText(
-                    title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .overline!
-                        .copyWith(fontSize: 32),
-                    textAlign: TextAlign.start,
-                    maxLines: 1,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    height: 0.05 * height,
+                    child: AutoSizeText(
+                      title,
+                      style: Theme.of(context)
+                          .textTheme
+                          .overline!
+                          .copyWith(fontSize: 32),
+                      textAlign: TextAlign.start,
+                      maxLines: 1,
+                    ),
                   ),
-                ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(Icons.timelapse_outlined, color: Theme.of(context).shadowColor,),
+                      SizedBox(width: 10,),
+                      AutoSizeText(duration, style: Theme.of(context).textTheme.bodyText1,)
+                    ],
+                  )
+                ],
               ),
               Divider(
                 color: Colors.grey[800],
