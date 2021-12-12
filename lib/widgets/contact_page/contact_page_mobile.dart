@@ -65,7 +65,7 @@ class MobileContactPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Image.asset(
-                    'github.png',
+                    'assets/github.png',
                     height: 50,
                     width: 50,
                   ),

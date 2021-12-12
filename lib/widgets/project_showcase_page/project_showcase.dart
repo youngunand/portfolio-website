@@ -60,7 +60,7 @@ class ProjectShowCase extends StatelessWidget {
                         itemBuilder: (context, i) {
                           return Container(
                             height: 0.45 * height,
-                            child: Image.asset(picturePaths[i]),
+                            child: Image.asset('assets/' +picturePaths[i]),
                           );
                         },
                         itemCount: picturePaths.length,
@@ -188,7 +188,7 @@ class ProjectShowCase extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 2),
                                     child: Image.asset(
-                                      '${technologiesUsed[i]}.png',
+                                      'assets/${technologiesUsed[i]}.png',
                                     ),
                                   );
                                 },
@@ -235,7 +235,7 @@ class ProjectShowCase extends StatelessWidget {
                                                 })
                                         ])),
                                         Image.asset(
-                                          'github.png',
+                                          'assets/github.png',
                                           height: 0.025 * height,
                                           width: 0.025 * height,
                                         )
@@ -271,7 +271,7 @@ class ProjectShowCase extends StatelessWidget {
                                                           })
                                               ])),
                                               Image.asset(
-                                                'google_play.png',
+                                                'assets/google_play.png',
                                                 height: 0.025 * height,
                                                 width: 0.025 * height,
                                               )

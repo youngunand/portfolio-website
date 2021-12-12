@@ -53,7 +53,7 @@ class MobileAboutPage extends StatelessWidget {
                           width: 5, color: Theme.of(context).focusColor),
                     ),
                     padding: EdgeInsets.all(20),
-                    child: Image.asset('profile_picture.jpeg')),
+                    child: Image.asset('assets/profile_picture.jpeg')),
               ],
             ),
           ),

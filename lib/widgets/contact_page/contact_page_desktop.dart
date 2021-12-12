@@ -69,7 +69,7 @@ class DesktopContactPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Image.asset(
-                              'github.png',
+                              'assets/github.png',
                               height: 50,
                               width: 50,
                             ),
