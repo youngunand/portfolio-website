@@ -23,17 +23,17 @@ class MobileLandingPage extends StatelessWidget {
                   children: [
                     AutoSizeText(
                       'Welcome',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: Theme.of(context).textTheme.headline1!.copyWith(fontSize:60),
                       maxLines: 1,
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     AutoSizeText(
-                      'My name is Andreas Herzinger. This website about me, trying to make the world a better place.',
+                      'My name is Andreas Herzinger.\n This website is about me, trying to\n make the world a better place.',
                       style: Theme.of(context).textTheme.subtitle1,
                       textAlign: TextAlign.center,
-                      maxLines: 2,
+                      maxLines: 3,
                     )
                   ],
                 )),
