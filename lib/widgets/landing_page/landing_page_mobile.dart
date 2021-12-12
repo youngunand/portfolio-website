@@ -14,27 +14,30 @@ class MobileLandingPage extends StatelessWidget {
       width: double.infinity,
       height: height,
       child: Center(
-          child: Container(
-              height: 0.5 * height,
-              width: width * 0.9,
-              child: Column(
-                children: [
-                  AutoSizeText(
-                    'Welcome',
-                    style: Theme.of(context).textTheme.headline1,
-                    maxLines: 1,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  AutoSizeText(
-                    'My name is Andreas Herzinger. This website about me, trying to make the world a better place.',
-                    style: Theme.of(context).textTheme.subtitle1,
-                    textAlign: TextAlign.center,
-                    maxLines: 2,
-                  )
-                ],
-              ))),
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Container(
+                height: 0.5 * height,
+                width: width * 0.9,
+                child: Column(
+                  children: [
+                    AutoSizeText(
+                      'Welcome',
+                      style: Theme.of(context).textTheme.headline1,
+                      maxLines: 1,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    AutoSizeText(
+                      'My name is Andreas Herzinger. This website about me, trying to make the world a better place.',
+                      style: Theme.of(context).textTheme.subtitle1,
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                    )
+                  ],
+                )),
+          )),
     );
   }
 }

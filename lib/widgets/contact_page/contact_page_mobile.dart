@@ -15,7 +15,7 @@ class MobileContactPage extends StatelessWidget {
 
     return Container(
       width: width,
-      height: 0.7*height,
+      height: 0.9*height,
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
       child: Stack(
         children: [

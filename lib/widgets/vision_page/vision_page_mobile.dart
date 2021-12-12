@@ -11,7 +11,7 @@ class MobileVisionPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Container(
       width: 0.9,
-      height: 1.2 * height,
+      height: 1.4 * height,
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

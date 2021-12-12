@@ -14,7 +14,7 @@ class MobileJourneyPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Container(
       width: double.infinity,
-      height: 1.7 * height,
+      height: 2 * height,
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -12,7 +12,7 @@ class MobileAboutPage extends StatelessWidget {
     
     return Container(
       width: double.infinity,
-      height: 1.7 * height,
+      height: 1.9 * height,
       padding: EdgeInsets.symmetric(horizontal: 15),
       child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
