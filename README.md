@@ -1,16 +1,12 @@
-# web_site_test
+# portfolio_website
 
-A new Flutter project.
+This project should showcase all of my interests, projects and visions on one page.
 
-## Getting Started
+Flutter Web was used to build everything. For the fonts I started to experiment with Google Fonts.
+The architecture is built so that I can add a new ProjectShowcase easily, by only adding a new ProjectShowcase Widget to the ListView 
+and simply provide all the necessary arguments. The website is hosted using GithubPages, which comes in handy as the builds update automatically
+when pushing to this repository.
 
-This project is a starting point for a Flutter application.
+If you want to know more about me, make sure to check this page out.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+url: https://youngunand.github.io/portfolio-website/#/
