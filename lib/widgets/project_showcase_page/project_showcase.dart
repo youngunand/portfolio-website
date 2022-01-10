@@ -69,7 +69,7 @@ class ProjectShowCase extends StatelessWidget {
                     ),
                     Align(
                       alignment: Alignment.centerLeft,
-                      child: picturePaths.length > 2
+                      child: picturePaths.length > 1
                           ? IconButton(
                               iconSize: 30,
                               icon: Icon(Icons.arrow_back_ios),
@@ -84,7 +84,7 @@ class ProjectShowCase extends StatelessWidget {
                     ),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: picturePaths.length > 2
+                      child: picturePaths.length > 1
                           ? IconButton(
                               iconSize: 30,
                               icon: Icon(Icons.arrow_forward_ios),
@@ -103,7 +103,7 @@ class ProjectShowCase extends StatelessWidget {
               SizedBox(
                 height: 0.01 * height,
               ),
-              picturePaths.length > 2
+              picturePaths.length > 1
                   ? SizedBox(
                     height: 0.02*height,
                     child: SmoothPageIndicator(

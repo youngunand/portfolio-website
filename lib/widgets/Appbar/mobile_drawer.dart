@@ -92,7 +92,7 @@ class MobileDrawer extends StatelessWidget {
                 contentPadding: EdgeInsets.symmetric(horizontal: 35),
                 onTap: () {
                   Navigator.of(context).pop();
-                _myService.scrollController.animateTo(9.8* height,
+                _myService.scrollController.animateTo(10.8* height,
                     duration: Duration(milliseconds: 1200), curve: Curves.ease);
                 },),
           ],

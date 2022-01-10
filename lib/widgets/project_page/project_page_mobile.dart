@@ -14,7 +14,7 @@ class MobileProjectPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Container(
         width: 0.9 * width,
-        height: 3.2 * height,
+        height: 4.2 * height,
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,6 +84,16 @@ class MobileProjectPage extends StatelessWidget {
                     technologiesUsed: ['python', 'rasperry_pi', 'git'],
                     autoSizeGroup: autoSizeGroup,
                     picturePaths: ['raspy_radio.png']),
+                SizedBox(height: 0.05 * height,),
+                ProjectShowCase(
+                    title: "Math Mini-Game",
+                    description:
+                        "App that let's user paint a tick, if he/she thinks the math statement is true. ",
+                    gitHubUrl: "https://github.com/youngunand/Gesture-Game",
+                    duration: "1 week",
+                    technologiesUsed: ["flutter", "dart", "git"],
+                    autoSizeGroup: autoSizeGroup,
+                    picturePaths: ["math_mini_game.png"]),
               ],
             ),
           ],

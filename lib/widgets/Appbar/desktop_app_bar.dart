@@ -82,7 +82,7 @@ class DesktopAppBar extends StatelessWidget {
                     TextButton(
                         onPressed: () {
                          _myService.scrollController
-                              .animateTo(5.7*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
+                              .animateTo(5.9*height, duration: Duration(milliseconds: 1200), curve: Curves.ease);
                         },
                         child: AutoSizeText(
                           'Contact',

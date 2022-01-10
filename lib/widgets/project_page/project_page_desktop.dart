@@ -77,10 +77,27 @@ class DesktopProjectPage extends StatelessWidget {
                           technologiesUsed: ['dart', 'flutter', 'git'],
                           autoSizeGroup: autoSizeGroup,
                         ),
-                        ProjectShowCase(title: 'Raspy-Radio', description: 'App I built for my father as he wanted to have an UI for his Radio Project.',duration: '1 week', gitHubUrl: 'https://github.com/youngunand/Rasperry-Pi-Radio', technologiesUsed: ['python', 'rasperry_pi', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['raspy_radio.png'])
-                
+                        ProjectShowCase(title: 'Raspy-Radio', description: 'App I built for my father as he wanted to have an UI for his Radio Project.',duration: '1 week', gitHubUrl: 'https://github.com/youngunand/Rasperry-Pi-Radio', technologiesUsed: ['python', 'rasperry_pi', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['raspy_radio.png']),
+  
                 ],
               ),
+              SizedBox(height: 0.05 * height,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                        
+                        ProjectShowCase(
+                    title: "Math Mini-Game",
+                    description:
+                        "App that let's user paint a tick, if he/she thinks the math statement is true. ",
+                    gitHubUrl: "https://github.com/youngunand/Gesture-Game",
+                    duration: "1 week",
+                    technologiesUsed: ["flutter", "dart", "git"],
+                    autoSizeGroup: autoSizeGroup,
+                    picturePaths: ["math_mini_game_1.png", "math_mini_game_2.png"]),
+                    SizedBox(width: 0.2 *height,)
+                ],
+              )
             ],
           ),
         ),
