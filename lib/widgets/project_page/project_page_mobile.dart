@@ -93,7 +93,7 @@ class MobileProjectPage extends StatelessWidget {
                     duration: "1 week",
                     technologiesUsed: ["flutter", "dart", "git"],
                     autoSizeGroup: autoSizeGroup,
-                    picturePaths: ["math_mini_game.png"]),
+                    picturePaths: ["math_mini_game_1.png", "math_mini_game_2.png"]),
               ],
             ),
           ],
