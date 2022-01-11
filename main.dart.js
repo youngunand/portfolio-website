@@ -57820,7 +57820,7 @@ f=A.a(["python","rasperry_pi","git"],l)
 f=A.lI(k,u.T,"1 week",u.t,!1,"",A.a(["raspy_radio.png"],l),f,"Raspy-Radio")
 e=A.a8(b,0.05*c.c,b)
 d=A.a(["flutter","dart","git"],l)
-return A.az(b,A.ch(A.a([r,p,o,n,m,A.ch(A.a([j,i,h,g,f,e,A.lI(k,u.G,"1 week",u.z,!1,"",A.a(["math_mini_game.png"],l),d,"Math Mini-Game")],q),B.q,B.z,B.m)],q),B.q,B.z,B.m),B.i,b,b,b,b,4.2*s,b,new A.ai(20,0,20,0),b,b,0.9*a)},
+return A.az(b,A.ch(A.a([r,p,o,n,m,A.ch(A.a([j,i,h,g,f,e,A.lI(k,u.G,"1 week",u.z,!1,"",A.a(["math_mini_game_1.png","math_mini_game_2.png"],l),d,"Math Mini-Game")],q),B.q,B.z,B.m)],q),B.q,B.z,B.m),B.i,b,b,b,b,4.2*s,b,new A.ai(20,0,20,0),b,b,0.9*a)},
 sab(a,b){return this.c=b},
 saf(a,b){return this.d=b}}
 A.DQ.prototype={
