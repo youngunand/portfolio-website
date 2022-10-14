@@ -84,14 +84,14 @@ class DesktopJourneyPage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       color: Theme.of(context).focusColor),
                   startChild: Text(
-                    'October 2020',
+                    'November 2021',
                     style: Theme.of(context).textTheme.bodyText2,
                     textAlign: TextAlign.end,
                   ),
                   endChild: Container(
                     height: 99,
                     child: AutoSizeText(
-                      'Started learning Java',
+                      'Finished and Released Fish-Finder',
                       style: Theme.of(context).textTheme.bodyText1,
                       group: timeLineGroup,
                     ),
@@ -109,14 +109,14 @@ class DesktopJourneyPage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       color: Theme.of(context).focusColor),
                   startChild: Text(
-                    'February 2021',
+                    'February 2022',
                     style: Theme.of(context).textTheme.bodyText2,
                     textAlign: TextAlign.end,
                   ),
                   endChild: Container(
                     height: 99,
                     child: AutoSizeText(
-                      'Finished Fisher-Exam App',
+                      'Got first SE Job',
                       style: Theme.of(context).textTheme.bodyText1,
                       group: timeLineGroup,
                     ),
@@ -134,14 +134,14 @@ class DesktopJourneyPage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       color: Theme.of(context).focusColor),
                   startChild: Text(
-                    'June 2021',
+                    'October 2022',
                     style: Theme.of(context).textTheme.bodyText2,
                     textAlign: TextAlign.end,
                   ),
                   endChild: Container(
                     height: 99,
                     child: AutoSizeText(
-                      'Started learning Flutter',
+                      'Started studying CS',
                       style: Theme.of(context).textTheme.bodyText1,
                       group: timeLineGroup,
                     ),
@@ -152,6 +152,7 @@ class DesktopJourneyPage extends StatelessWidget {
                   afterLineStyle:
                       LineStyle(color: Theme.of(context).shadowColor),
                 ),
+                /*
                 TimelineTile(
                     isLast: true,
                     alignment: TimelineAlign.center,
@@ -174,7 +175,7 @@ class DesktopJourneyPage extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                     ),
                     beforeLineStyle:
-                        LineStyle(color: Theme.of(context).shadowColor)),
+                        LineStyle(color: Theme.of(context).shadowColor)),*/
               ],
             ),
           ),

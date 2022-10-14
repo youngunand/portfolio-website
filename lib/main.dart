@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'home_screen.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Andreas Herzinger',
+      localizationsDelegates: [AppLocalizations.delegate,],
       theme: ThemeData(
         primarySwatch: Colors.blue,
         hoverColor: Color(0xff06133f),
