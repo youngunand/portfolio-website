@@ -33,7 +33,7 @@ class DesktopAboutPage extends StatelessWidget {
               SizedBox(
                   width: 375,
                   child: Text(
-                    'Hey there! My name is Andreas Herzinger and I am a young Software Developer from Austria.\n\nSince I was a small child, I always had an interest in math and science. It was just a natural thing to me to explore how things work. From calculating the mass of a whole mountain (yes, a real mountain) to thinking about sizing continents on flat maps - my head was always trying to figure things out. \n\nAbout a year ago I picked up coding and started to grow a big interest in Technology and Computers. ',
+                    'Hey there! My name is Andreas Herzinger and I am a young Software Developer from Austria.\n\nSince I was a small child, I always had an interest in math and science. It was just a natural thing to me to explore how things work. From calculating the mass of a whole mountain (yes, a real mountain) to thinking about sizing continents on flat maps - my head was always trying to figure things out. \n\nAbout two years ago I picked up coding and started to grow a big interest in Technology and Computers. ',
                     style: Theme.of(context).textTheme.bodyText1,
                   ))
             ],

@@ -153,10 +153,10 @@ class MobileJourneyPage extends StatelessWidget {
           Container(
               width: double.infinity,
               child: AutoSizeText(
-                '''When I first started to code I felt lost. I did not know where to start and what language to learn. After some googling I started with Python. I did some tutorials, but ended up not knowing anything. 
-                  \nAfter that, I bought the book "Head First Java" and learned Java with it. After reading it, I started to build my own Desktop App using Java. It was very basic, but actually helped me studying for the Fishing-Exam.
-                  \nWhen I had finished this App, I really wanted to develop Apps for Mobile Devices. Therefore I started learning Flutter. In August I started building my first big production App - Fish-Finder. I managed to relase it in the Google Play Store at the end of November.
-                  ''',
+                      '''When I first started to code I felt lost. I did not know where to start and what language to learn. After some googling I started with Python. I did some small projects, but ended up learning Java properly, using the book "Head-First Java". I built some small nice projects with it - including a Fishing-Exam App. I actually used it when studying for the exam.
+                    \nWhen I had finished this App, I really wanted to develop Apps for Mobile Devices. Therefore I started learning Flutter. In August of 2021 I started building my first big production App - Fish-Finder. I managed to relase it in the Google Play Store at the end of November.
+                \nThis App also got me my first Junior Developer Job. I started working at MatheArena - a fast growing Ed-Tech Startup located in Austria. There I learned what its like to work in a team, on real world applications and to take responsibility. 
+                ''',
                 style: Theme.of(context).textTheme.bodyText1,
               ))
         ],

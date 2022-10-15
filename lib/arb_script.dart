@@ -20,7 +20,14 @@ void main(List<String> args) async {
 
         for (var match in allMatches) {
           if (match.group(0) != null) {
-            print(match.group(0));
+            final matchSplit = match.group(0)!.split(" ");
+            String firstTwoSplitWords;
+            if (matchSplit.length > 1) {
+              firstTwoSplitWords = matchSplit.first + matchSplit[1];
+            } else {
+              firstTwoSplitWords = matchSplit.first;
+            }
+            outputFile.writeAsStringSync(keyPrefix + firstTwoSplitWords + ":");
           }
         }
       }
