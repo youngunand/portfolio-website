@@ -21,11 +21,16 @@ class DesktopProjectPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(width: 572,/*child: Icon(Icons.build_circle_outlined, size: 160,color: Theme.of(context).focusColor,),*/),
+              SizedBox(
+                width:
+                    572, /*child: Icon(Icons.build_circle_outlined, size: 160,color: Theme.of(context).focusColor,),*/
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 0.1*height,),
+                  SizedBox(
+                    height: 0.1 * height,
+                  ),
                   Text(
                     '4. Projects',
                     style: Theme.of(context).textTheme.subtitle2,
@@ -47,61 +52,93 @@ class DesktopProjectPage extends StatelessWidget {
           ),
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 0.04*width),
-
+          padding: EdgeInsets.symmetric(horizontal: 0.04 * width),
           child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ProjectShowCase(
-                          picturePaths: ['fish_finder_1.png', 'fish_finder_2.png', 'fish_finder_3.png', 'fish_finder_4.png', 'fish_finder_5.png'],
-                          title: 'Fish-Finder',
-                          gitHubUrl: 'https://github.com/youngunand/Fishing-App',
-                          description:
-                              'App for Fishermen, who want to track their catches.',
-                          duration: '4 months',
-                          technologiesUsed: ['dart', 'firebase', 'flutter', 'git'],
-                          googlePlayLinked: true,
-                          googlePlayUrl:
-                              'https://play.google.com/store/apps/details?id=com.sendit_studios.fishing_app',
-                          autoSizeGroup: autoSizeGroup,
-                        ),
-                        ProjectShowCase(
-                          picturePaths: ['zivi_counter.png'],
-                          title: 'Zivi-Counter',
-                          gitHubUrl: 'https://github.com/youngunand/Zivi-Counter',
-                          description:
-                              'App for "Zivildiener" in Austria, who want to know when their Zivildienst is done.',
-                          duration: '3 days',
-                          technologiesUsed: ['dart', 'flutter', 'git'],
-                          autoSizeGroup: autoSizeGroup,
-                        ),
-                        ProjectShowCase(title: 'Raspy-Radio', description: 'App I built for my father as he wanted to have an UI for his Radio Project.',duration: '1 week', gitHubUrl: 'https://github.com/youngunand/Rasperry-Pi-Radio', technologiesUsed: ['python', 'rasperry_pi', 'git'], autoSizeGroup: autoSizeGroup, picturePaths: ['raspy_radio.png']),
-  
+                    picturePaths: [
+                      'fish_finder_1.png',
+                      'fish_finder_2.png',
+                      'fish_finder_3.png',
+                      'fish_finder_4.png',
+                      'fish_finder_5.png'
+                    ],
+                    title: 'Fish-Finder',
+                    gitHubUrl: 'https://github.com/youngunand/Fishing-App',
+                    description:
+                        'App for Fishermen, who want to track their catches.',
+                    duration: '4 months',
+                    technologiesUsed: ['dart', 'firebase', 'flutter', 'git'],
+                    googlePlayLinked: true,
+                    googlePlayUrl:
+                        'https://play.google.com/store/apps/details?id=com.sendit_studios.fishing_app',
+                    autoSizeGroup: autoSizeGroup,
+                  ),
+                  ProjectShowCase(
+                    picturePaths: ['zivi_counter.png'],
+                    title: 'Zivi-Counter',
+                    gitHubUrl: 'https://github.com/youngunand/Zivi-Counter',
+                    description:
+                        'App for "Zivildiener" in Austria, who want to know when their Zivildienst is done.',
+                    duration: '3 days',
+                    technologiesUsed: ['dart', 'flutter', 'git'],
+                    autoSizeGroup: autoSizeGroup,
+                  ),
+                  ProjectShowCase(
+                      title: 'Raspy-Radio',
+                      description:
+                          'App I built for my father as he wanted to have an UI for his Radio Project.',
+                      duration: '1 week',
+                      gitHubUrl:
+                          'https://github.com/youngunand/Rasperry-Pi-Radio',
+                      technologiesUsed: ['python', 'rasperry_pi', 'git'],
+                      autoSizeGroup: autoSizeGroup,
+                      picturePaths: ['raspy_radio.png']),
                 ],
               ),
-              SizedBox(height: 0.05 * height,),
+              SizedBox(
+                height: 0.05 * height,
+              ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                        
-                        ProjectShowCase(
-                    title: "Math Mini-Game",
-                    description:
-                        "App that let's user paint a tick, if he/she thinks the math statement is true. ",
-                    gitHubUrl: "https://github.com/youngunand/Gesture-Game",
-                    duration: "1 week",
-                    technologiesUsed: ["flutter", "dart", "git"],
-                    autoSizeGroup: autoSizeGroup,
-                    picturePaths: ["math_mini_game_1.png", "math_mini_game_2.png"]),
-                    SizedBox(width: 0.2 *height,)
+                  ProjectShowCase(
+                      title: "Math Mini-Game",
+                      description:
+                          "App that let's user paint a tick, if he/she thinks the math statement is true. ",
+                      gitHubUrl: "https://github.com/youngunand/Gesture-Game",
+                      duration: "1 week",
+                      technologiesUsed: ["flutter", "dart", "git"],
+                      autoSizeGroup: autoSizeGroup,
+                      picturePaths: [
+                        "math_mini_game_1.png",
+                        "math_mini_game_2.png"
+                      ]),
+                  SizedBox(
+                    width: 0.2 * height,
+                  ),
+                  ProjectShowCase(
+                      title: "Simulating Roulette Strategies",
+                      description:
+                          "Jupyter Notebooks that compares different Roulette Bankroll-Strategies",
+                      gitHubUrl: "https://github.com/youngunand/Us-European-Roulette",
+                      duration: "1 week",
+                      technologiesUsed: ["git"],
+                      autoSizeGroup: autoSizeGroup,
+                      picturePaths: [
+                        "roulette_strategies.png"
+                      ]),
                 ],
               )
             ],
           ),
         ),
-        SizedBox(height: 0.15*height,)
+        SizedBox(
+          height: 0.15 * height,
+        )
       ],
     );
   }

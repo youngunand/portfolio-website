@@ -62,14 +62,14 @@ class MobileJourneyPage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   color: Theme.of(context).focusColor),
               startChild: Text(
-                'October 2020',
+                'Winter 2021',
                 style: Theme.of(context).textTheme.bodyText2,
                 textAlign: TextAlign.end,
               ),
               endChild: Container(
                 height: 99,
                 child: AutoSizeText(
-                  'Started learning Java',
+                  'Learned Java and Flutter',
                   style: Theme.of(context).textTheme.bodyText1,
                   group: timeLineGroup,
                 ),
@@ -85,14 +85,14 @@ class MobileJourneyPage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   color: Theme.of(context).focusColor),
               startChild: Text(
-                'February 2021',
+                'November 2021',
                 style: Theme.of(context).textTheme.bodyText2,
                 textAlign: TextAlign.end,
               ),
               endChild: Container(
                 height: 99,
                 child: AutoSizeText(
-                  'Finished Fisher-Exam App',
+                  'Finished and Released Fish-Finder',
                   style: Theme.of(context).textTheme.bodyText1,
                   group: timeLineGroup,
                 ),
@@ -108,14 +108,14 @@ class MobileJourneyPage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   color: Theme.of(context).focusColor),
               startChild: Text(
-                'June 2021',
+                'February 2022',
                 style: Theme.of(context).textTheme.bodyText2,
                 textAlign: TextAlign.end,
               ),
               endChild: Container(
                 height: 99,
                 child: AutoSizeText(
-                  'Started learning Flutter',
+                  'Got first SE Job',
                   style: Theme.of(context).textTheme.bodyText1,
                   group: timeLineGroup,
                 ),
@@ -132,14 +132,14 @@ class MobileJourneyPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     color: Theme.of(context).focusColor),
                 startChild: Text(
-                  'November 2021',
+                  'October 2022',
                   style: Theme.of(context).textTheme.bodyText2,
                   textAlign: TextAlign.end,
                 ),
                 endChild: Container(
                   height: 99,
                   child: AutoSizeText(
-                    'Finished Fish-Finder App',
+                    'Started studying CS',
                     style: Theme.of(context).textTheme.bodyText1,
                     group: timeLineGroup,
                   ),

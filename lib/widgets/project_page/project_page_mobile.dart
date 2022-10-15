@@ -84,7 +84,9 @@ class MobileProjectPage extends StatelessWidget {
                     technologiesUsed: ['python', 'rasperry_pi', 'git'],
                     autoSizeGroup: autoSizeGroup,
                     picturePaths: ['raspy_radio.png']),
-                SizedBox(height: 0.05 * height,),
+                SizedBox(
+                  height: 0.05 * height,
+                ),
                 ProjectShowCase(
                     title: "Math Mini-Game",
                     description:
@@ -93,7 +95,23 @@ class MobileProjectPage extends StatelessWidget {
                     duration: "1 week",
                     technologiesUsed: ["flutter", "dart", "git"],
                     autoSizeGroup: autoSizeGroup,
-                    picturePaths: ["math_mini_game_1.png", "math_mini_game_2.png"]),
+                    picturePaths: [
+                      "math_mini_game_1.png",
+                      "math_mini_game_2.png"
+                    ]),
+                SizedBox(
+                  height: 0.05 * height,
+                ),
+                ProjectShowCase(
+                    title: "Simulating Roulette Strategies",
+                    description:
+                        "Jupyter Notebooks that compares different Roulette Bankroll-Strategies",
+                    gitHubUrl:
+                        "https://github.com/youngunand/Us-European-Roulette",
+                    duration: "1 week",
+                    technologiesUsed: ["git"],
+                    autoSizeGroup: autoSizeGroup,
+                    picturePaths: ["roulette_strategies.png"]),
               ],
             ),
           ],
