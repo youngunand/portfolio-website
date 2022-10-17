@@ -23,15 +23,29 @@
   <meta name="apple-mobile-web-app-title" content="web_site_test">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>web_site_test</title>
+  <title>Andreas Herzinger</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }      .indicator{
+      height: 50vh;
+    }
+</style>
 </head>
 <body>
+  <div id="loading_circle" class="container">
+    <img class="indicator" src="./assets/programming_computer.gif" />
+  </div>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '3690553855';
+    var serviceWorkerVersion = '2666469498';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
