@@ -121,12 +121,12 @@ class DesktopProjectPage extends StatelessWidget {
                     width: 0.2 * height,
                   ),
                   ProjectShowCase(
-                      title: "Simulating Roulette Strategies",
+                      title: "Simulating Roulette",
                       description:
                           "Jupyter Notebooks that compares different Roulette Bankroll-Strategies",
                       gitHubUrl: "https://github.com/youngunand/Us-European-Roulette",
                       duration: "1 week",
-                      technologiesUsed: ["git"],
+                      technologiesUsed: ["python","jupyter","git"],
                       autoSizeGroup: autoSizeGroup,
                       picturePaths: [
                         "roulette_strategies.png"

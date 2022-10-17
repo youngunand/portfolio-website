@@ -113,7 +113,7 @@ class DesktopContactPage extends StatelessWidget {
                     SizedBox(width: 5,),
                     Icon(Icons.copyright_outlined, color: Theme.of(context).shadowColor,),
                     SizedBox(width: 5,),
-                    Text('2021 Andreas Herzinger', style: Theme.of(context).textTheme.bodyText1,),
+                    Text('2022 Andreas Herzinger', style: Theme.of(context).textTheme.bodyText1,),
                     
                     
                   ],

@@ -14,7 +14,7 @@ class MobileProjectPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Container(
         width: 0.9 * width,
-        height: 4.2 * height,
+        height: 5.2 * height,
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -103,13 +103,13 @@ class MobileProjectPage extends StatelessWidget {
                   height: 0.05 * height,
                 ),
                 ProjectShowCase(
-                    title: "Simulating Roulette Strategies",
+                    title: "Simulating Roulette",
                     description:
                         "Jupyter Notebooks that compares different Roulette Bankroll-Strategies",
                     gitHubUrl:
                         "https://github.com/youngunand/Us-European-Roulette",
                     duration: "1 week",
-                    technologiesUsed: ["git"],
+                    technologiesUsed: ["python","jupyter","git"],
                     autoSizeGroup: autoSizeGroup,
                     picturePaths: ["roulette_strategies.png"]),
               ],
